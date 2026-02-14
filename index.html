@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI Sederhana</title>
+    <link rel="stylesheet" href="BMI.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BMI Calculator</h1>
+            <p>Hitung Indeks Massa Tubuh Anda dengan mudah</p>
+        </header>
+
+        <main>
+            <div class="input-card">
+                <div class="input-group">
+                    <label for="weight">Berat Badan (kg)</label>
+                    <input type="number" id="weight" placeholder="Contoh: 65" step="0.1" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Tinggi Badan (cm)</label>
+                    <input type="number" id="height" placeholder="Contoh: 170" step="0.1" min="0">
+                </div>
+
+                <div class="button-group">
+                    <button id="hitungBtn" class="btn-primary">Hitung BMI</button>
+                    <button id="resetBtn" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="result-card" id="resultCard">
+                <h2>Hasil Perhitungan</h2>
+                <div class="bmi-display">
+                    <span class="bmi-label">BMI Anda</span>
+                    <span class="bmi-value" id="bmiValue">0.0</span>
+                    <span class="bmi-unit">kg/m²</span>
+                </div>
+                <div class="category-display">
+                    <span class="category-label">Kategori</span>
+                    <span class="category-value" id="categoryValue">-</span>
+                </div>
+                <div class="info-text">
+                    <p>Kategori berdasarkan standar WHO:</p>
+                    <ul>
+                        <li>&lt; 18.5 : Underweight (Kurus)</li>
+                        <li>18.5 – 24.9 : Normal</li>
+                        <li>25 – 29.9 : Overweight (Gemuk)</li>
+                        <li>30 – 34.9 : Obese (Obesitas)</li>
+                        <li>&gt;= 35 : Extremely Obese (Sangat Obesitas)</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Abdul karim algazali &copy; 2026</p>
+        </footer>
+    </div>
+
+    <script src="BMI.js"></script>
+</body>
+</html>
